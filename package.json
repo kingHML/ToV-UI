@@ -1,0 +1,18 @@
+{
+  "name": "gothic",
+  "version": "1.0.0",
+  "description": "Domain Components and API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.tuboshi.co/FE/gothic.git"
+  },
+  "keywords": [
+    "Gothic"
+  ],
+  "author": "jsen.xu",
+  "license": "ISC"
+}
