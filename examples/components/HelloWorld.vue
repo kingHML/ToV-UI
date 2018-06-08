@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <house-list></house-list>
   </div>
 </template>
@@ -32,4 +31,7 @@ li {
 a {
   color: #42b983;
 }
+  .hello{
+    padding: 0.15rem;
+  }
 </style>
