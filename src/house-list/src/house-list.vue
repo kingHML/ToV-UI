@@ -71,7 +71,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="css">
   @import '../../common/css/var.css';
   .h-housing-list{
     background-color: #fff;

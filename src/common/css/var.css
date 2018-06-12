@@ -1,6 +1,35 @@
-:root {
-  --title-color: red;
+html {
+   font-size: 100px;
+   font-size: calc(1000vw/37.5);
+   background: #f0f0f0;
+   width: 100%;
+   font-family: "Helvetica Neue", Tahoma, Arial, PingFangSC-Regular,
+   "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+   line-height: 1.2;
+   user-select: none;
+   -webkit-font-smoothing: antialiased;
+   touch-action: manipulation;
+   text-size-adjust: none;
+   -webkit-tap-highlight-color: transparent;
+ }
+* {
+  margin: 0;
+  padding: 0;
 }
+body {
+  width: 100%;
+  font-size: 0.14rem;
+  line-height: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none;
+}
+button{
+  border:0px;
+  background-color:transparent;
+}
+
 .red{
   color: #FD5056;
 }
@@ -12,3 +41,5 @@
   background-size: 0.08rem 0.15rem;
 
 }
+/*$title-color: red;*/
+
