@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import HelloWorld from '@/src/HelloWorld'
+import HelloWorld from '@/packages/HelloWorld'
 
 describe('HelloWorld.vue', () => {
   it('should render correct contents', () => {

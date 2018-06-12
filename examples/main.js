@@ -2,8 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import vui from '../src/index'
-Vue.use(vui)
+// import vui from '../packages/index'
+// Vue.use(vui)
+import { HouseList } from '../packages/index'
+Vue.use(HouseList)
 
 Vue.config.productionTip = false
 

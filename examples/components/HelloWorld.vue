@@ -5,13 +5,18 @@
 </template>
 
 <script>
+  // import { HouseList } from '../../packages/index'
   export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: 'HelloWorld',
+    data () {
+      return {}
+    },
+    created () {
+      console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+    },
+    components: {
+      // HouseList
     }
-  }
 }
 </script>
 

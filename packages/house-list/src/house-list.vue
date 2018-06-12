@@ -3,13 +3,13 @@
     <div class="h-housing-item">
       <div class="h-house-general">
         <div class="house-img">
-          <img src="//www.baidu.com/img/baidu_jgylogo3.gif" alt="" width="100%" class="main-house-img">
+          <img src="./img/all-internet-house.png" alt="" width="100%" class="main-house-img">
           <div class="house-module-img">
-            <div class="module-img" style="padding-right: 0.1rem">
-              <img src="//www.baidu.com/img/baidu_jgylogo3.gif" alt="" width="100%" height="100%">
+            <div class="module-img" style="padding-right: 3px;">
+              <img src="./img/all-internet-house.png" alt="" width="100%" height="100%">
             </div>
             <div class="module-img">
-              <img src="//www.baidu.com/img/baidu_jgylogo3.gif" alt="" width="100%" height="100%">
+              <img src="./img/all-internet-house.png" alt="" width="100%" height="100%">
             </div>
           </div>
           <i class="housing-type"></i>
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="h-housing-conclusion">
-      <img src="//www.baidu.com/img/baidu_jgylogo3.gif" alt="" style="width:1rem;height: 0.75rem;">
+      <img src="./img/all-internet-house.png" alt="" style="width:1rem;height: 0.75rem;">
       <div class="conclusion-detail">
         <p class="title">3室2厅2卫 138㎡ <span class="red" style="font-size: 0.15rem;float: right">1100万</span></p>
         <p style="font-size: 0.12rem">挂牌机构：20个 <span style="float: right">9.8万/㎡</span></p>
@@ -52,9 +52,8 @@
 <script>
   import $Api from './houseListApi'
   export default {
-    name: 'house-list',
+    name: 'HouseList',
     created () {
-      console.log('houselest components')
       this.getList()
     },
     methods: {

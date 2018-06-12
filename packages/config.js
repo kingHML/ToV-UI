@@ -1,13 +1,13 @@
 export const Utils = {
   config: {
     dev: {
-      apiUrl: 'https://test02.2boss.cn/'
+      apiUrl: 'https://test01.2boss.cn/'
     },
     test: {
       apiUrl: 'https://test02.2boss.cn/'
     },
     pro: {
-      apiUrl: 'https://test02.2boss.cn/'
+      apiUrl: 'https://ta.2boss.cn/'
     }
   }
 }

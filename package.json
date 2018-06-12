@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "hanmeiling",
-  "main": "src/index.js",
+  "main": "packages/index.js",
   "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -71,21 +71,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "directories": {
-    "example": "examples",
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kingHML/ToV-UI.git"
-  },
-  "keywords": [
-    "vue-ui"
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kingHML/ToV-UI/issues"
-  },
-  "homepage": "https://github.com/kingHML/ToV-UI#readme"
+  ]
 }
