@@ -2,6 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
 // import vui from '../packages/index'
 // Vue.use(vui)
 import { HouseList } from '../packages/index'

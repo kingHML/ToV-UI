@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="h-housing-list" v-for="(item, key) in list" :key=key>
-      <div class="h-housing-item" v-if="item.estateType !== 3">
+      <div class="h-housing-item" v-if="item.estateType !== 3" @click="linkHouseDetail()">
         <div class="h-house-general">
           <div class="house-img">
             <img :src="item.picList[0]" alt="" width="100%" class="main-house-img">
@@ -17,11 +17,11 @@
           </div>
           <div class="house-desc">
             <p class="title">{{item.roomCount}}室{{item.livingRoomCount}}厅{{item.bathroomCount}}卫 {{item.area}}㎡</p>
-            <p class="area">{{item.totalPriceMillion}}万/㎡｜挂牌<span class="red">{{item.listedDay}}</span>天｜{{item.favoriteCount}}人已关注</p>
-            <p class="price red"><span class="num">{{item.avgPrice}}</span><span>万</span></p>
-            <p class="tag"><span class="tag-item" v-for="(tag, n) in item.tags" :key="n">{{tag}}</span></p>
-            <p class="list-broker-text">挂牌经纪人：{{item.superiorName}}</p>
-            <p class="list-broker-text">{{item.agentName}}-{{item.storeName}}</p>
+            <p class="area">{{item.avgPrice}}万/㎡｜挂牌<span class="red">{{item.listedDay}}</span>天｜{{item.favoriteCount}}人已关注</p>
+            <p class="price red"><span class="num">{{item.totalPriceMillion}}</span><span>万</span></p>
+            <p class="tag" v-if="item.tags && item.tags.length"><span class="tag-item" v-for="(tag, n) in item.tags" :key="n">{{tag}}</span></p>
+            <p class="list-broker-text">挂牌经纪人：{{item.superiorName || '--'}}</p>
+            <p class="list-broker-text" v-if="item.agentName || item.storeName">{{item.agentName}}-{{item.storeName}}</p>
           </div>
         </div>
         <div class="house-certification" v-if="item.estateType === 1 && item.certificateInfo">
@@ -86,10 +86,12 @@
       getValuationDetail (id) {
         $Api.getHouseAssessDeatil({estateId: id}).then(res => {
           if (res.resultCode === 0 && res.body) {
-            this.popInfo = red.body
+            this.popInfo = res.body
             this.isShowModal = true
           }
         })
+      },
+      linkHouseDetail () {
       },
       closeModal () {
         this.isShowModal = false
