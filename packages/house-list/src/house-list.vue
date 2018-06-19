@@ -4,13 +4,16 @@
       <div class="h-housing-item" v-if="item.estateType !== 3" @click="linkHouseDetail()">
         <div class="h-house-general">
           <div class="house-img">
-            <img :src="item.picList[0]" alt="" width="100%" class="main-house-img">
+            <img v-if="item.picList[0]" :src="item.picList[0]" alt="" width="100%" class="main-house-img">
+            <img v-else src="./img/waiting.jpg" alt="" width="100%" class="main-house-img">
             <div class="house-module-img">
               <div class="module-img" style="padding-right: 3px;">
-                <img :src="item.picList[1]" alt="" width="100%" height="100%">
+                <img v-if="item.picList[1]" :src="item.picList[1]" alt="" width="100%" height="100%">
+                <img v-else src="./img/waiting.jpg" alt="" width="100%" height="100%">
               </div>
               <div class="module-img">
-                <img :src="item.picList[2]" alt="" width="100%" height="100%">
+                <img v-if="item.picList[2]" :src="item.picList[2]" alt="" width="100%" height="100%">
+                <img v-else src="./img/waiting.jpg" alt="" width="100%" height="100%">
               </div>
             </div>
             <i class="housing-type" :class="item.estateType === 1?'shikan':'youxuan'"></i>
@@ -40,7 +43,8 @@
         </div>
       </div>
       <div class="h-housing-conclusion" @click="getValuationDetail(item.id)" v-else>
-        <img src="./img/all-internet-house.png" alt="" style="width:1rem;height: 0.8rem;">
+        <img v-if="item.picList[0]" :src="item.picList[0]" alt="" style="width:1rem;height: 0.8rem;">
+        <img v-else src="./img/waiting.jpg" alt="" style="width:1rem;height: 0.8rem;">
         <div class="conclusion-detail">
           <p class="title">{{item.roomCount}}室{{item.livingRoomCount}}厅{{item.bathroomCount}}卫 {{item.area}}㎡<span class="red price">{{item.totalPriceMillion}}万</span></p>
           <p class="list-broker-text">挂牌机构：{{item.listedOrgCount}}个 <span style="float: right">{{item.avgPrice}}万/㎡</span></p>
@@ -92,6 +96,8 @@
         })
       },
       linkHouseDetail () {
+        this.$router.push('/href')
+        console.log('link href')
       },
       closeModal () {
         this.isShowModal = false
@@ -139,7 +145,7 @@
     background-size: 0.37rem 0.18rem;
   }
   .h-house-general .house-img .main-house-img{
-    height: 1.05rem;
+    height: 1.03rem;
     flex: 1;
   }
   .h-housing-item .h-house-general .house-desc{
@@ -153,6 +159,7 @@
     padding-bottom: 0.06rem;
   }
   .house-desc .title {
+    font-weight: 700;
     font-size: 0.16rem;
     color: #474747;
   }
@@ -251,7 +258,8 @@
     margin-bottom: 0.06rem;
   }
   .conclusion-detail .title{
-    font-size: 0.18rem;
+    font-weight: 700;
+    font-size: 0.16rem;
   }
   .conclusion-detail .price {
     float: right;
